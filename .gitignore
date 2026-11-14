@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*$py.class
+timers_cloud.json
+.env
+.venv/

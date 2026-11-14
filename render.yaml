@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: dragon-city-timer
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    plan: free
+    region: singapore
+    envVars:
+      - key: DISCORD_WEBHOOK
+        value: https://discord.com/api/webhooks/1571126372599070780/JoLO7Qn-hn2mXCIle7x72-7WsBei3M3z5_S9WfI5TdOe_GV3rTczTqSfmNuF-4qMjfLZ
+      - key: SECRET_KEY
+        value: dragoncity_battle_2026
